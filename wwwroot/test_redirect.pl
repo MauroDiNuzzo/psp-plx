@@ -1,0 +1,2 @@
+:-
+         use_module(library(http/http_wrapper)),         http_current_request(Request),          http_redirect(moved,'http://www.github.com/',Request),http_format('<html',[]), http_format(' xmlns:psp="http://www.prologserverpages.com/"',[]), http_format('>',[]), http_format('</html>',[]), true.

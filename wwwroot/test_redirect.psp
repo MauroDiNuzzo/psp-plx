@@ -1,0 +1,16 @@
+<html xmlns:psp="http://www.prologserverpages.com/"
+    psp:prolog="
+        use_module(library(http/http_wrapper)),
+        http_current_request(Request), 
+        http_redirect(moved,'http://www.github.com/',Request)">
+</html>
+
+<!--
+The following are other equivalent alternatives to realize redirection.
+
+    http_reply(moved('http://www.github.com/'),current_output,[]),
+
+    throw(http_reply(moved('http://www.github.com/'))),
+    
+    format('Location: http://www.github.com/\r\n\r\n',[]),       
+-->

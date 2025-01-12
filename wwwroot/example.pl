@@ -1,0 +1,3 @@
+:-
+http_format('<html',[]), http_format(' xmlns:psp="http://www.prologwebservices.org/psp"',[]), http_format('>',[]), http_format('<body',[]), http_format('>',[]), (ensure_loaded('example_database.pl'), http_format('<div',[]), http_format('>',[]), (p(X), 
+http_format(' Now X is ',[]), http_format('<b',[]), http_format('>',[]), (write(X), fail ; true), http_format('</b>',[]), http_format('<br',[]), http_format('>',[]), http_format('<span',[]), http_format(' style="text-decoration: underline;"',[]), http_format('>',[]), (q(X), http_format('Do something when X=c here!',[]), http_format('<br',[]), http_format('>',[]), fail ; true), http_format('</span>',[]), fail ; true), http_format('</div>',[]), fail ; true), http_format('</body>',[]), http_format('</html>',[]), true.

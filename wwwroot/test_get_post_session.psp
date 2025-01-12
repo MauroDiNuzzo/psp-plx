@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:psp="http://www.prologwebservices.org/psp">
+
+<body psp:prolog="
+  use_module(library(http/http_wrapper)),
+  use_module(library(http/http_session)),
+  use_module(library(http/http_parameters)),
+  ignore(http_session_data(name(Previous))),
+  http_current_request(Request),
+  http_parameters(Request,[
+      name(Name,[default(guest)])
+  ]),  
+  http_session_retractall(name(_)),
+  http_session_assert(name(Name))
+">
+
+<h2>Hello, <span psp:prolog="write(Name)">!</span></h2>
+
+<h3 psp:prolog="Name \= Previous">Previously you were known as <span psp:prolog="write(Previous)"></span>.</h3>
+
+<p>
+Fill the form below to test either GET or POST request as well as session data management.
+</p>
+
+<p>
+<table>
+<tr><th>Method</th><th>Value</th><th></th></tr>
+
+<form method="get" action="">
+<tr><td>
+GET
+</td><td>
+<input type="text" name="name" placeholder="Your Name" size="30">
+</td><td>
+<input type="submit" value="Submit">
+</td></tr>
+</form>
+
+<form method="post" action="">
+<tr><td>
+POST
+</td><td>
+<input type="text" name="name" placeholder="Your Name" size="30">
+</td><td>
+<input type="submit" value="Submit">
+</td></tr>
+</form>
+</table>
+</p>
+
+</body>
+
+</html>
+  
+  
+  

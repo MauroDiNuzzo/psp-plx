@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<html xmlns:psp="http://www.prologwebservices.org/psp">
+	<body psp:prolog="Msg = 'Hello, world!'">
+		<h1 psp:prolog="write(Msg)"></h1>
+	</body>
+</html> 

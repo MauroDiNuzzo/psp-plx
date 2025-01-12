@@ -1,0 +1,2 @@
+:-
+http_format('<html',[]), http_format(' xmlns:psp="http://www.prologwebservices.org/psp"',[]), http_format('>',[]), http_format('<body',[]), http_format('>',[]), (Msg = 'Hello, world!', http_format('<h1',[]), http_format('>',[]), (write(Msg), fail ; true), http_format('</h1>',[]), fail ; true), http_format('</body>',[]), http_format('</html>',[]), true.

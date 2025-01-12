@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:psp="http://www.prologwebservices.org/psp" 
+    psp:prolog="
+        use_module(library(http/http_wrapper)),
+        use_module(library(http/http_dispatch)),
+        use_module(library(http/http_session))
+">
+
+<body psp:prolog="
+    http_current_request(Request), 
+    http_session_id(SessionID), 
+    working_directory(Directory, Directory), 
+    http_current_handler(Handler, Closure)
+">
+
+<h2>Welcome to Prolog Server Pages/Prolog XML</h2>
+
+<p>Current directory is <code psp:prolog="write(Directory)"></code></p>
+<p>Current Request is <code psp:prolog="write(Request)"></code></p>
+<p>Current SessionID is <code psp:prolog="write(SessionID)"></code></p>
+<p>Current handler is <code psp:prolog="write(Handler)"></code> with closure <code psp:prolog="write(Closure)"></code></p>
+
+</body>
+
+</html>
+  
+  
+  

@@ -1,0 +1,9 @@
+<!DOCTYPE html> 
+<html xmlns:psp="http://www.prologwebservices.org/psp"> 
+	<body psp:prolog="ensure_loaded('example_database.pl')"> 
+		<div psp:prolog="p(X)"> 
+			Now X is <b psp:prolog="write(X)"></b><br> 
+			<span style="text-decoration: underline;" psp:prolog="q(X)">Do something when X=c here!<br></span> 
+		</div> 
+	</body> 
+</html>
