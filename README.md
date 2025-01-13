@@ -18,15 +18,15 @@ the syntax eXtension Prolog XML (PLX). These are **server-side scripting languag
 Prolog** (for information about the declarative Prolog language, see https://en.wikipedia.org/wiki/Prolog).
 
 The current PSP/PLX implementation is developed on top of SWI Prolog version 9.x 
-(http://www.swi-prolog.org/), which is available for Linux, Windows and MacOSX. 
+(https://www.swi-prolog.org/), which is available for Linux, Windows and MacOSX. 
 The relevant handlers are incorporated into the SWI Prolog HTTP server infrastructure. 
 Therefore, there is native support for all standard HTTP library predicates 
 (for details, see the SWI Prolog HTTP server package documentation at 
-http://www.swi-prolog.org/pldoc/package/http.html). 
+https://www.swi-prolog.org/pldoc/package/http.html). 
 
 The present brief tutorial describes how to install and get started with PSP/PLX for 
 simple web applications. Detailed documentation will be available on the official 
-website (http://www.prologserverpages.com/) in due course, depending on further developments.
+website (https://prologserverpages.com/) in due course, depending on further developments.
 
 ### Background and prior work
 The first Prolog Server Pages (PSP) implementation was developed by Suciu et al., 2006 
@@ -50,10 +50,10 @@ to be much harder to read and debug.
 
 A substantial change in Prolog scripting followed Richard O'Keefe’s Prolog 
 Well-formed Pages (PWP). Such approach is based on the principle that a source script 
-is a well-formed XML document (see http://www.swi-prolog.org/pldoc/man?section=pwp). 
+is a well-formed XML document (see https://www.swi-prolog.org/pldoc/man?section=pwp). 
 
 Other alternatives to write HTML pages as Prolog terms include the SWI Prolog 
-`html_write` library (see http://www.swi-prolog.org/pldoc/man?section=htmlwrite), which
+`html_write` library (see https://www.swi-prolog.org/pldoc/man?section=htmlwrite), which
 however makes the underlying HTML hardly recognizable (see below).
 
 ### Motivation
@@ -78,7 +78,7 @@ Here is the script written using the `pwp` library:
 ```html
 <!-- helloworld.pwp (Prolog Well-formed Pages) -->
 <html
-    xmlns:pwp="http://www.cs.otago.ac.nz/staffpriv/ok/pwp.pl"
+    xmlns:pwp="https://www.cs.otago.ac.nz/staffpriv/ok/pwp.pl"
     pwp:ask="ensure_loaded('msg.pl'),msg(Greeting,Style)">
     <body>
         <p pwp:use="Style" pwp:att="$" style="$(Style)$">
@@ -93,7 +93,7 @@ Here is the script written using the `psp` library:
 ```html
 <!-- helloworld.psp (Prolog Server Pages) -->
 <html 
-    xmlns:psp="http://www.prologserverpages.com/"
+    xmlns:psp="https://www.prologserverpages.com/"
     psp:prolog="ensure_loaded('msg.pl'),msg(Greeting,Style)">
     <body>
         <p psp:style="write(Style)" psp:prolog="write(Greeting)"></p>
@@ -185,7 +185,7 @@ as is done for example in Javascript XML (JSX).
 ## Getting started
 
 ### Download and installation
-PSP is not yet released as a SWI Prolog add-on pack (http://www.swi-prolog.org/pack/list), 
+PSP is not yet released as a SWI Prolog add-on pack (https://www.swi-prolog.org/pack/list), 
 thus to install PSP just download/unpack the archive to your favourite location and load
 the `http_psp` and/or `http_plx` modules from the Prolog toplevel: 
 
@@ -262,7 +262,7 @@ Now consider the following PSP page:
 
 ```html
 <!DOCTYPE html>    
-<html xmlns:psp="http://www.prologserverpages.com/">
+<html xmlns:psp="https://www.prologserverpages.com/">
     <body psp:prolog="ensure_loaded('database.pl')">
         <div psp:prolog="p(X)">
             Now X is <b psp:prolog="write(X)"></b>
@@ -280,7 +280,7 @@ Equivalently, using PLX the script would look like the following:
 ```prolog
 :-
 ensure_loaded('database.pl'),  
-<html xmlns:psp="http://www.prologwebservices.org/psp">,
+<html xmlns:psp="https://www.prologwebservices.org/psp">,
     <body>, 
         (   p(X),
             <div>,
@@ -327,7 +327,7 @@ option HTML tag, which is achieved by:
 
 ```html
 <!DOCTYPE html>    
-<html xmlns:psp="http://www.prologserverpages.com/">
+<html xmlns:psp="https://www.prologserverpages.com/">
     <select name="PrologFlag" psp:prolog="
         current_prolog_flag(Name,Value),
         Selected = dialect
@@ -379,10 +379,10 @@ redirection:
 ```html
 <!-- index.psp -->
 <!DOCTYPE html>    
-<html xmlns:psp="http://www.prologserverpages.com/" 
+<html xmlns:psp="https://www.prologserverpages.com/" 
     psp:prolog="
         http_current_request(Request), 
-        http_redirect(moved,'http://www.github.com/',Request)
+        http_redirect(moved,'https://www.github.com/',Request)
     ">
 </html>
 ```
@@ -398,7 +398,7 @@ before any HTML tag, as follows:
 % index.plx
 :-
 http_current_request(Request), 
-http_redirect(moved,'http://www.github.com/',Request).  
+http_redirect(moved,'https://www.github.com/',Request).  
 ```
 
 ## Concluding remarks 
