@@ -26,7 +26,7 @@ https://www.swi-prolog.org/pldoc/package/http.html).
 
 The present brief tutorial describes how to install and get started with PSP/PLX for 
 simple web applications. Detailed documentation will be available on the official 
-website (https://prologserverpages.com/) in due course, depending on further developments.
+website (http://prologserverpages.com/) in due course, depending on further developments.
 
 ### Background and prior work
 The first Prolog Server Pages (PSP) implementation was developed by Suciu et al., 2006 
