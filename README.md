@@ -204,7 +204,7 @@ with respect to handler definition (i.e., `http_dispatch` library), according to
 directive: 
 
 ```prolog
-:- http_handler(root(.),psp_handler,[prefix]).
+:- http_handler(root(.),psp_plx_handler,[prefix]).
 ```
 
 ### Configuration
