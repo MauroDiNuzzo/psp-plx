@@ -187,11 +187,10 @@ as is done for example in Javascript XML (JSX).
 ### Download and installation
 PSP is not yet released as a SWI Prolog add-on pack (https://www.swi-prolog.org/pack/list), 
 thus to install PSP just download/unpack the archive to your favourite location and load
-the `http_psp` and/or `http_plx` modules from the Prolog toplevel: 
+the `http_psp_plx` module from the Prolog toplevel: 
 
 ```prolog
-| ?- use_module('/path/to/psp.pl').
-| ?- use_module('/path/to/plx.pl').
+| ?- use_module('/path/to/http_psp_plx.pl').
 ```
 
 ### Features
